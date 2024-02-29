@@ -1,7 +1,8 @@
-// User.js
+// User Schema
 
 const mongoose = require('mongoose');
 const jwt=require('jsonwebtoken');
+// const { number } = require('zod');
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -14,7 +15,7 @@ const userSchema = new mongoose.Schema({
         // assuming email should be unique
     },
     phone: {
-        type: Number,
+        type: String,
         required: true
     },
     password: {

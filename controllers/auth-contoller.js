@@ -14,7 +14,7 @@ const home = async (req, res) => {
         }
     };
 
-//User login with JWT token and bcrypt hashing
+//User login with JWT token and bcrypt hashing.....
     const register = async (req, res) => {
         try {
             const { username, email, phone, password } = req.body;
@@ -38,8 +38,9 @@ const home = async (req, res) => {
                 userId: userCreated._id.toString(),
                 user: userCreated });
         } catch (error) {
-            console.error("Error in user registration:", error);
-            res.status(500).json({ msg: "Internal Server Error" });
+            // console.error("Error in user registration:", error);
+            // res.status(500).json({ msg: "Internal Server Error" });
+      next(error);
         }
     };
 
